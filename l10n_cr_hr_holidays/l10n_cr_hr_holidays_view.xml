@@ -6,9 +6,9 @@
             <field name="name">view.l10n.cr.hr.holidays.employee.form</field>
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
-            <field name="priority" eval="17"/>
+            <field name="priority" eval="100"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='remaining_leaves']/.." position="after">
+                <xpath expr="//group/div" position="after">
                     <label for="leaves_per_period"/>
                     <div>
                         <field name="leaves_per_period" class="oe_inline"/> days
