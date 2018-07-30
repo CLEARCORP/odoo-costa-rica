@@ -43,7 +43,7 @@ Create the Trial Balance report
              'views/report_trial_balance.xml',
             ],
     'active': False,
-    'installable': True,
+    'installable': False,
     'license': 'AGPL-3',
 }
 

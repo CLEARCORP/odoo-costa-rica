@@ -41,7 +41,7 @@ Create the situation balance report
              'views/report_situation_balance.xml',
             ],
     'active': False,
-    'installable': True,
+    'installable': False,
     'license': 'AGPL-3',
 }
 

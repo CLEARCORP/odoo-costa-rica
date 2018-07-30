@@ -47,7 +47,7 @@ Configuration:
              'views/report_profit_statement.xml',
             ],
     'active': False,
-    'installable': True,
+    'installable': False,
     'license': 'AGPL-3',
 }
 

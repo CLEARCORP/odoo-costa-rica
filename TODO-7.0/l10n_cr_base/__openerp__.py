@@ -64,6 +64,6 @@
         'l10n_cr_base_view.xml',
         ],
     'license': 'Other OSI approved licence',
-    'installable': True,
+    'installable': False,
     'active': False,
 }

@@ -46,7 +46,7 @@ Costa Rica Account Financial Statements
                     'wizard/situation_balance_statement_report_wizard_view.xml',
                     'report_menus.xml',
                     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
 }
 

@@ -35,6 +35,6 @@ This module add a constraint for custumer reference and custumer in sale order
     'data': [
              ],
     'active': False,
-    'installable': True,
+    'installable': False,
     'license': 'AGPL-3',
 }

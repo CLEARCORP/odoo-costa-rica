@@ -48,7 +48,7 @@ Configuration:
              'views/report_trial_balance_currency.xml',
             ],
     'active': False,
-    'installable': True,
+    'installable': False,
     'license': 'AGPL-3',
 }
 

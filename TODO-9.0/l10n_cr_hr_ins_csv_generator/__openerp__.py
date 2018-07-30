@@ -44,6 +44,6 @@ Module build for the generation of custom files to
     'test': [],
     'auto_install': False,
     'application': False,
-    'installable': True,
+    'installable': False,
     'license': 'AGPL-3',
 }

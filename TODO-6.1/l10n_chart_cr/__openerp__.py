@@ -61,6 +61,6 @@
 		'data/account_tax_template.xml',
 		],
 	'license': 'Other OSI approved licence',
-	'installable': True,
+	'installable': False,
 	'active': False,
 }

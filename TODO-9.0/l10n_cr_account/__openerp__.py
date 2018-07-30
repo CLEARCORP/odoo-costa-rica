@@ -35,6 +35,6 @@ This module add a constraint for fields supplier invoice number and supplier in 
     'data': [
              ],
     'active': False,
-    'installable': True,
+    'installable': False,
     'license': 'AGPL-3',
 }

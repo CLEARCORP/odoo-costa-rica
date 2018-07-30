@@ -45,7 +45,7 @@ Changed the refence field of account_voucher to required
     "test" : [],
     'auto_install': False,
     "application": True,
-    "installable": True,
+    "installable": False,
     'license': 'AGPL-3',
 }
 

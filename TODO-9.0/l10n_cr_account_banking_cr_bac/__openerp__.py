@@ -38,5 +38,5 @@
     Module to import BAC CR format transation files (S.W.I.F.T MT940).
     ''',
     'active': False,
-    'installable': True,
+    'installable': False,
 }

@@ -46,7 +46,7 @@ Configuration:
                    'l10n_cr_account_conciliation_bank_report.xml',
                    'report_menus.xml',
                    ],                
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'license': 'AGPL-3',
 }

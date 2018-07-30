@@ -35,5 +35,5 @@
     'demo_xml': [],
     'description': 'Module intended to import Davivienda\'s statements files',
     'active': False,
-    'installable': True,
+    'installable': False,
 }

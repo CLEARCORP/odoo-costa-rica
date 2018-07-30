@@ -35,5 +35,5 @@
     'demo_xml': [],
     'description': '',
     'active': False,
-    'installable': True,
+    'installable': False,
 }

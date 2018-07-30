@@ -12,7 +12,7 @@
     'sequence': 10,
     'license': 'AGPL-3',
     'application': False,
-    'installable': True,
+    'installable': False,
     'active': False,
     'depends': [
         'hr_payroll_extended',
