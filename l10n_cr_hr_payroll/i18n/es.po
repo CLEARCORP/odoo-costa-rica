@@ -514,6 +514,18 @@ msgid "Second Limit"
 msgstr "Segundo límite"
 
 #. module: l10n_cr_hr_payroll
+#: model:ir.model.fields,field_description:l10n_cr_hr_payroll.field_hr_payroll_config_settings_third_limit
+#: model:ir.model.fields,field_description:l10n_cr_hr_payroll.field_res_company_third_limit
+msgid "Third Limit"
+msgstr "Tercer límite"
+
+#. module: l10n_cr_hr_payroll
+#: model:ir.model.fields,field_description:l10n_cr_hr_payroll.field_hr_payroll_config_settings_fourth_limit
+#: model:ir.model.fields,field_description:l10n_cr_hr_payroll.field_res_company_fourth_limit
+msgid "Fourth Limit"
+msgstr "Cuarto límite"
+
+#. module: l10n_cr_hr_payroll
 #: model:ir.ui.view,arch_db:l10n_cr_hr_payroll.hr_payslip_view_form2_inherit
 msgid "Send by Email"
 msgstr "Enviar por correo electrónico"

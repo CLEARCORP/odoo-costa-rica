@@ -23,6 +23,14 @@
                                 <label for="second_limit"/>
                                 <field name="second_limit" class="oe_inline"/>
                             </div>
+                            <div name="third_limit">
+                                <label for="third_limit"/>
+                                <field name="third_limit" class="oe_inline"/>
+                            </div>
+                            <div name="fourth_limit">
+                                <label for="fourth_limit"/>
+                                <field name="fourth_limit" class="oe_inline"/>
+                            </div>
                             <div name="amount_per_child">
                                 <label for="amount_per_child"/>
                                 <field name="amount_per_child" class="oe_inline"/>

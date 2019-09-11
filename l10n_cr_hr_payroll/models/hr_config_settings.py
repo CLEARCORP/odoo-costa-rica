@@ -18,6 +18,12 @@ class HRSettingsConf(models.TransientModel):
     second_limit = fields.Float(
         string='Second Limit', digits=dp.get_precision('Payroll'),
         default=0.0)
+    third_limit = fields.Float(
+        string='Third Limit', digits=dp.get_precision('Payroll'),
+        default=0.0)
+    fourth_limit = fields.Float(
+        string='Fourth Limit', digits=dp.get_precision('Payroll'),
+        default=0.0)
     amount_per_child = fields.Float(
         string='Amount per Child', digits=dp.get_precision('Payroll'),
         default=0.0)
@@ -31,11 +37,15 @@ class HRSettingsConf(models.TransientModel):
         if self.rent_company_id:
             self.first_limit = self.rent_company_id.first_limit
             self.second_limit = self.rent_company_id.second_limit
+            self.third_limit = self.rent_company_id.third_limit
+            self.fourth_limit = self.rent_company_id.fourth_limit
             self.amount_per_child = self.rent_company_id.amount_per_child
             self.amount_per_wife = self.rent_company_id.amount_per_wife
         else:
             self.first_limit = 0.0
             self.second_limit = 0.0
+            self.third_limit = 0.0
+            self.fourth_limit = 0.0
             self.amount_per_child = 0.0
             self.amount_per_wife = 0.0
 
@@ -70,6 +80,30 @@ class HRSettingsConf(models.TransientModel):
     def set_second_limit(self):
         for wizard in self:
             wizard.rent_company_id.write({'second_limit': self.second_limit})
+
+    """Get the default third_limit"""
+    @api.model
+    def get_third_limit(self, fields):
+        company = self.env['res.company']._company_default_get()
+        return {'third_limit': company.third_limit}
+
+    """Set the default third_limit in the selected company"""
+    @api.multi
+    def set_third_limit(self):
+        for wizard in self:
+            wizard.rent_company_id.write({'third_limit': self.third_limit})
+
+    """Get the default fourth_limit"""
+    @api.model
+    def get_fourth_limit(self, fields):
+        company = self.env['res.company']._company_default_get()
+        return {'fourth_limit': company.fourth_limit}
+
+    """Set the default fourth_limit in the selected company"""
+    @api.multi
+    def set_fourth_limit(self):
+        for wizard in self:
+            wizard.rent_company_id.write({'fourth_limit': self.fourth_limit})
 
     """Get the default amount_per_child"""
     @api.model

@@ -81,40 +81,31 @@ result = rules.NET > categories.NET * 0.10''',
         python code on salary rule.
 
         This function compute rent for a employee"""
-        subtotal = 0.0
-        exceed_2 = 0.0
-        exceed_1 = 0.0
         total = 0.0
 
 #       From hr.conf.settings, it's in company
         limit1 = company.first_limit
         limit2 = company.second_limit
+        limit3 = company.third_limit
+        limit4 = company.fourth_limit
+
+        percent1 = 0.10
+        percent2 = 0.15
+        percent3 = 0.20
+        percent4 = 0.25
 
         wife_amount = company.amount_per_wife
         child_amount = company.amount_per_child
-
         children_numbers = employee.report_number_child
 
-#       exceed second limit
-        if SBT >= limit2:
-            exceed_2 = SBT - limit2
-#           15% of limit2
-            subtotal += exceed_2 * 0.15
-#           10% of difference between limits
-            limit_temp = (limit2 - limit1) * 0.10
-            subtotal += limit_temp
+        total += max(0.0, SBT - limit4) * percent4
+        total += max(0.0, min(SBT, limit4) - limit3) * percent3
+        total += max(0.0, min(SBT, limit3) - limit2) * percent2
+        total += max(0.0, min(SBT, limit2) - limit1) * percent1
 
-#       exceed first limit
-        elif SBT >= limit1:
-            exceed_1 = SBT - limit1
-#           10% of limit1
-            subtotal += exceed_1 * 0.10
-
-        if subtotal and employee.report_wife:
-            total = subtotal - wife_amount - (child_amount *
-                                              children_numbers)
-        elif subtotal:
-            total = subtotal - (child_amount * children_numbers)
+        if total and employee.report_wife:
+            total = total - wife_amount
+        total = total - (child_amount * children_numbers)
         return total
 
 # =============================================================================

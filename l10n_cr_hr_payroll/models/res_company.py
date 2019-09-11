@@ -14,6 +14,10 @@ class resCompanyInherit(models.Model):
                                digits=dp.get_precision('Payroll'))
     second_limit = fields.Float(string='Second Limit',
                                 digits=dp.get_precision('Payroll'))
+    third_limit = fields.Float(string='Third Limit',
+                                digits=dp.get_precision('Payroll'))
+    fourth_limit = fields.Float(string='Fourth Limit',
+                                digits=dp.get_precision('Payroll'))
     amount_per_child = fields.Float(string='Amount per Child',
                                     digits=dp.get_precision('Payroll'))
     amount_per_wife = fields.Float(string='Amount per wife',
