@@ -103,9 +103,10 @@ result = rules.NET > categories.NET * 0.10''',
         total += max(0.0, min(SBT, limit3) - limit2) * percent2
         total += max(0.0, min(SBT, limit2) - limit1) * percent1
 
-        if total and employee.report_wife:
-            total = total - wife_amount
-        total = total - (child_amount * children_numbers)
+        if total:
+            if employee.report_wife:
+                total = max(0.0, total - wife_amount)
+            total = max(0.0, total - (child_amount * children_numbers))
         return total
 
 # =============================================================================
