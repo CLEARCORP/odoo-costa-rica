@@ -1,6 +1,0 @@
-import l10n_cr_partners_ledger
-import l10n_cr_open_invoices
-import l10n_cr_partner_balance
-import account_bank_balances
-import l10n_cr_account_financial_report
-
